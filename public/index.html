@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="css/output.css" rel="stylesheet">
 <title>Chat</title>
-<script src="/socket.io/socket.io.js"></script>
-<script src="chat.js"></script>
+<script defer src="/socket.io/socket.io.js"></script>
+<script defer src="chat.js"></script>
 
 
 </head>
 <nav class="flex flex-wrap justify-end bg-mm-jet w-full h-16">
-    <button class=" w-11 id=" hamburger"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+    <button class=" w-11" id=" hamburger"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
             stroke-width="1.5" stroke="white" class="w-6 h-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
         </svg>
@@ -19,6 +19,15 @@
 </nav>
 
 <body class="bg-black ">
+
+    <br>
+    <div class="p-2 text-white">
+        <ul li class="  break-words text-white justify-start bg-black rounded-lg ring-4 ring-mm-orange
+        w-auto h-auto" id="messages">
+        </ul>
+    </div>
+    <br>
+
     <form id="chat-message-input" action="">
         <div class="flex flex-wrap justify-center">
             <input id="message" type="text" placeholder="What's on your mind?"
@@ -26,9 +35,8 @@
 
             <button class="bg-white" type="submit">send</button>
     </form>
-    <div class="bg-white text-white">
-        <ul id="messages""></ul>
-            </div>
-        </div>
+    </div>
+
 </body>
+
 </html>
