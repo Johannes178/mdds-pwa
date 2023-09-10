@@ -8,7 +8,6 @@
 <script defer src="/socket.io/socket.io.js"></script>
 <script defer src="chat.js"></script>
 
-
 </head>
 <nav class="flex flex-wrap justify-end bg-mm-jet w-full h-16">
     <button class=" w-11" id=" hamburger"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -18,25 +17,19 @@
     </button>
 </nav>
 
-<body class="bg-black ">
-
-    <br>
-    <div class="p-2 text-white">
-        <ul li class="  break-words text-white justify-start bg-black rounded-lg ring-4 ring-mm-orange
-        w-auto h-auto" id="messages">
+<body class="bg-black flex flex-col h-screen">
+    <div class="p-2 text-white flex-grow">
+        <ul class=" text-white justify-start bg-black mb-4 ring-4 ring-mm-orange p-2 rounded-lg
+        w-auto p-2 h-auto" id="messages">
         </ul>
     </div>
     <br>
-
     <form id="chat-message-input" action="">
-        <div class="flex flex-wrap justify-center">
+        <div class="p-2 flex flex-wrap justify-center">
             <input id="message" type="text" placeholder="What's on your mind?"
-                class="text-white bg-black rounded-xl ring-4 ring-mm-orange w-80 h-8 p-2">
-
-            <button class="bg-white" type="submit">send</button>
+                class="text-white text-center justify-start bg-black rounded-lg ring-4 ring-mm-orange w-full p-2 h-auto">
     </form>
     </div>
-
 </body>
 
 </html>
