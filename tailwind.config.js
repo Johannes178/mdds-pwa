@@ -1,19 +1,22 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: ["./public/**/*.{html,js}", "./src/**/*.{html,js}"],
   theme: {
     screens: {
-      sm: "400px",
+      sm: "640px",
       md: "768px",
       lg: "1024px",
       xl: "1280px",
       "2xl": "1536px",
     },
     extend: {
+      backgroundImage: {
+        "bg-image": "url('../dist/img/bg.jpeg')",
+      },
       colors: {
-        "gm-orange-500": "#FFA5000",
-        "gm-black": "#FF00000",
-        "gm-white": "#FFFFFF",
+        "mm-orange": "rgba(255, 92, 0, 1)",
+        "mm-black": "rgba(0, 0, 0, 1)",
+        "mm-white": "rgba(255, 255, 255, 1)",
       },
     },
   },
