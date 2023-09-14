@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="../src/input.css" rel="stylesheet">
+<title>Chat</title>
+<script defer src="/socket.io/socket.io.js"></script>
+<script defer src="chat.js"></script>
+
+<head>
+    <nav class="flex flex-wrap justify-end bg-mm-jet w-full h-16">
+        <button class=" w-11" id=" hamburger"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke-width="1.5" stroke="white" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+    </nav>
+</head>
+
+<body class="bg-black flex flex-col h-screen">
+    <div class="p-2 text-white flex-grow">
+        <ul class=" text-white justify-start bg-black mb-4 ring-4 ring-mm-orange p-2 rounded-lg
+        w-auto p-2 h-auto" id="messages">
+        </ul>
+    </div>
+    <br>
+    <form id="chat-message-input" action="">
+        <div class="p-2 flex flex-wrap justify-center">
+            <input id="message" type="text" placeholder="What's on your mind?"
+                class="text-white text-center justify-start bg-black rounded-lg ring-4 ring-mm-orange w-full p-2 h-auto">
+    </form>
+    </div>
+</body>
+
+</html>

@@ -20,6 +20,7 @@
   "homepage": "https://github.com/Johannes178/mdds-pwa#readme",
   "devDependencies": {
     "nodemon": "^3.0.1",
-    "tailwindcss": "^3.3.3"
+    "tailwindcss": "^3.3.3",
+    "video.js": "^8.5.2"
   }
 }
