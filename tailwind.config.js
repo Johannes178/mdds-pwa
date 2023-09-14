@@ -10,9 +10,6 @@ module.exports = {
       "2xl": "1536px",
     },
     extend: {
-      backgroundImage: {
-        "bg-image": "url('../dist/img/bg.jpeg')",
-      },
       colors: {
         "mm-orange": "rgba(255, 92, 0, 1)",
         "mm-black": "rgba(0, 0, 0, 1)",
