@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/output.css" rel="stylesheet">
     <link href="https://vjs.zencdn.net/8.5.2/video-js.css" rel="stylesheet" />
-    <script src="/socket.io/socket.io.js"></script>
-    <script defer src="chat.js"></script>
+    <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
 
 </head>
 
@@ -81,7 +80,7 @@
                     </button>
                     <ul>
                         <li>
-                            <a href="index.html" class="block py-8 text-white" aria-current="page">START</a>
+                            <a href="./index.html" class="block py-8 text-white" aria-current="page">START</a>
                         </li>
                         <li>
                             <a href="/program" class="block py-8 text-white">PROGRAM</a>
@@ -90,56 +89,42 @@
                             <a href="video.html" class="block py-8 text-white">MORE VIDEOS</a>
                         </li>
                         <li>
-                            <a href="#" class="block py-8 text-white">CHAT</a>
+                            <a href="./chat.html" class="block py-8 text-white">CHAT</a>
                         </li>
                     </ul>
                 </div>
             </div>
     </nav>
+    <div class="relative flex-auto items-center justify-center min-h-screen p-9 xl:p-20">
+        <video data-dashjs-player controls>
+            <source src="my_video_manifest.mpd" type="application/dash+xml">
+            <!-- Fallback, enable after making sure that mpd file works, <source src="example-vid.mp4"> -->
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    </div>
 
-    <body class="bg-black flex flex-col h-screen">
-        <div class="p-2 text-white flex-grow">
-            <ul class=" text-white justify-start bg-black mb-4 ring-4 ring-mm-orange p-2 rounded-lg
-        w-auto p-2 h-auto" id="messages">
-            </ul>
-        </div>
-        <br>
-        <form id="chat-message-input" action="">
-            <div class="p-2 flex flex-wrap justify-center">
-                <input id="message" type="text" placeholder="What's on your mind?"
-                    class="text-white text-center justify-start bg-black rounded-lg ring-4 ring-mm-orange w-full p-2 h-auto">
-                <button type="submit"
-                    class="self-end mt-2 p-2 text-blue-600 rounded-full cursor-pointer hover:bg-blue-100 dark:text-blue-500 dark:hover:bg-gray-600"
-                    style="width: 40px; height: 40px;">
-                    <svg class="w-6 h-6 rotate-90" fill="salmon " viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z">
-                        </path>
-                    </svg>
-                </button>
-        </form>
-        </div>
-        <script>
-            let navbarHamburger = document.getElementById('navbar-hamburger');
-            let backButton = document.querySelector('#navbar-hamburger button');
-            let isMenuOpen = false; // Track the menu state
+    <script>
+        let navbarHamburger = document.getElementById('navbar-hamburger');
+        let backButton = document.querySelector('#navbar-hamburger button');
+        let isMenuOpen = false; // Track the menu state
 
 
-            function toggleMenu() {
-                if (!isMenuOpen) {
-                    navbarHamburger.classList.add('translate-x-0'); // Add the class to show the menu
-                } else {
-                    navbarHamburger.classList.remove('translate-x-0'); // Remove the class to hide the menu
-                }
-                isMenuOpen = !isMenuOpen; // Toggle the menu state
-            }
-
-            function goBack() {
+        function toggleMenu() {
+            if (!isMenuOpen) {
+                navbarHamburger.classList.add('translate-x-0'); // Add the class to show the menu
+            } else {
                 navbarHamburger.classList.remove('translate-x-0'); // Remove the class to hide the menu
-                isMenuOpen = false; // Update the menu state
             }
-        </script>
-    </body>
+            isMenuOpen = !isMenuOpen; // Toggle the menu state
+        }
+
+        function goBack() {
+            navbarHamburger.classList.remove('translate-x-0'); // Remove the class to hide the menu
+            isMenuOpen = false; // Update the menu state
+        }
+    </script>
+
+</body>
 
 </html>
