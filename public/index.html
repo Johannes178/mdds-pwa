@@ -7,11 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/output.css" rel="stylesheet">
     <link href="https://vjs.zencdn.net/8.5.2/video-js.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
 
 <body class="bg-black">
-    <nav class="sticky top-0 z-50 bg-black">
-        <div class="max-w-screen-sm flex flex-wrap items-center justify-between mx-auto px-5 py-5 ">
+    <nav class="sticky top-0 z-50 bg-black pt-5">
+        <div class=" max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-5 py-5 ">
             <a href="./index.html" class="flex items-center">
                 <img src="../dist/img/header.png" class="h-10 px-1" alt="metropolia cine" />
             </a>
@@ -49,14 +51,15 @@
                            3.00,10.00 23.00,10.00 23.00,10.00 Z" />
                 </svg>
             </button>
-            <div class="fixed inset-0 flex items-center justify-center bg-black text-white transform translate-x-full transition-transform duration-300 ease-in-out"
-                id="navbar-hamburger">
-                <div class="text-center">
-                    <button onclick="toggleMenu()" type="button"
-                        class="inline-flex items-center justify-center p-1 px-2 py-2 text-sm rounded-lg text-white hover:bg-mm-orange focus:outline-none focus:ring focus:ring-mm-orange"
-                        aria-expanded="false"> <svg xmlns=" http://www.w3.org/2000/svg" width="0.644444in"
-                            height="0.644444in" viewBox="0 0 58 58">
-                            <path id="/dist/img/exitburger.svg" fill=" white" stroke=" white" stroke-width="0" d="M 38.90,14.86
+        </div>
+        <div class="fixed inset-0 flex items-center justify-center bg-black text-white transform translate-x-full transition-transform duration-300 ease-in-out"
+            id="navbar-hamburger">
+            <div class="text-center">
+                <button onclick="toggleMenu()" type="button"
+                    class="inline-flex items-center justify-center p-1 px-2 py-2 text-sm rounded-lg text-white hover:bg-mm-orange focus:outline-none focus:ring focus:ring-mm-orange"
+                    aria-expanded="false"> <svg xmlns=" http://www.w3.org/2000/svg" width="0.644444in"
+                        height="0.644444in" viewBox="0 0 58 58">
+                        <path id="/dist/img/exitburger.svg" fill=" white" stroke=" white" stroke-width="0" d="M 38.90,14.86
                         C 40.07,13.69 41.97,13.69 43.14,14.86
                             43.14,14.86 43.14,14.86 43.14,14.86
                             44.31,16.03 44.31,17.93 43.14,19.10
@@ -74,27 +77,29 @@
                             14.86,14.86 14.86,14.86 14.86,14.86
                             16.03,13.69 17.93,13.69 19.10,14.86
                             19.10,14.86 43.14,38.90 43.14,38.90 Z" />
-                        </svg>
-                    </button>
-                    <ul>
-                        <li>
-                            <a href="#" class="block py-8 text-white" aria-current="page">START</a>
-                        </li>
-                        <li>
-                            <a href="radio.html" class="block py-8 text-white">PROGRAM</a>
-                        </li>
-                        <li>
-                            <a href="video.html" class="block py-8 text-white">MORE VIDEOS</a>
-                        </li>
-                        <li>
-                            <a href="chat.html" class="block py-8 text-white">CHAT</a>
-                        </li>
-                    </ul>
-                </div>
+                    </svg>
+                </button>
+                <ul>
+                    <li>
+                        <a href="#" class="block py-8 text-sm lg:text-base text-white" aria-current="page">START</a>
+                    </li>
+                    <li>
+                        <a href="radio.html" class="block py-8 text-white">PROGRAM</a>
+                    </li>
+                    <li>
+                        <a href="video.html" class="block py-8 text-white">MORE VIDEOS</a>
+                    </li>
+                    <li>
+                        <a href="chat.html" class="block py-8 text-white">CHAT</a>
+                    </li>
+                </ul>
             </div>
+        </div>
     </nav>
-    <div class="relative flex-auto items-center justify-center min-h-screen p-9 xl:p-20">
-        <video id="my-video" class=" video-js w-full lg:w-2/3" preload="auto" data-setup="{}">
+
+
+    <div class="flex items-center  justify-center px-12 lg:p-12">
+        <video id="my-video1" class="video-js " autoplay muted data-setup="{}">
             <source src="/dist/img/M09-1317.mp4" type="video/mp4" />
             <p class="vjs-no-js">
                 To view this video please enable JavaScript, and consider upgrading to a
@@ -102,7 +107,14 @@
                 <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
             </p>
         </video>
-        <video id="my-video" class="video-js w-full lg:w-2/3" autoplay muted data-setup="{}">
+        <div
+            class="bg-mm-black lg:p-4 xs:p-2 rounded-md absolute transform text-mm-white  text-center xs:text-sm lg:text-2xl">
+            National Geographic <p> 16:15
+        </div>
+    </div>
+
+    <div class="relative flex items-center justify-center px-12 lg:p-12">
+        <video id="my-video2" class="video-js" autoplay muted data-setup="{}">
             <source src="/dist/img/offline-video_9ff1a430b8d1fb095a75666ce8bc22e0.mp4" type="video/mp4" />
             <p class="vjs-no-js">
                 To view this video please enable JavaScript, and consider upgrading to a
@@ -110,7 +122,13 @@
                 <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
             </p>
         </video>
+        <div
+            class="bg-mm-black lg:p-4 xs:p-2 rounded-md absolute transform text-mm-white text-center xs:text-sm lg:text-2xl">
+            Workplace drama <p> 18:15
+        </div>
     </div>
+
+
     <script src="https://vjs.zencdn.net/8.5.2/video.min.js"></script>
     <script>
         let myPlayer = document.querySelector(".video-js");
@@ -123,7 +141,7 @@
             loop: true,
             muted: true,
             preload: true,
-            poster: "img/mm-banner.jpg",
+            responsive: true,
             userActions: {
                 doubleClick: true
             }
